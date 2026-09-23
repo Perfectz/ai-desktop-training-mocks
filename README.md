@@ -11,10 +11,10 @@ These are independent static training props—not product clones connected to re
 | Product | What is staged | Open |
 | --- | --- | --- |
 | Microsoft 365 Copilot | Chat, Cowork tasks, Work IQ, Workflow agent, approvals, task history, schedules, customization | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/microsoft/) |
-| ChatGPT desktop | Chat, Work, unified Recents, Projects, search, plugins, Codex task and diff views | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/chatgpt/) |
+| ChatGPT desktop | Chat, Work, connected apps, unified Recents, Projects, search, scheduled work, Sites, plugins, Codex task and diff views | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/chatgpt/) |
 | Claude Desktop | Unified Claude chats and tasks, Artifacts, Research, Projects, scheduled work, Claude Code | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/claude/) |
 
-Each mock has deterministic URLs for capture automation, editable fake data, a hidden tutorial studio, responsive layouts, inline SVG icons, and a small JavaScript control API.
+Across the three products, 33 deterministic scenes provide capture automation, editable fake data, a hidden tutorial studio, responsive layouts, inline SVG icons, and a small JavaScript control API.
 
 ## Fastest way to stage a tutorial
 
@@ -52,6 +52,7 @@ resources/
   HYPERFRAMES_REMOTION.md
   RECORDING_CHECKLIST.md
   ACCURACY_NOTES.md
+  REALISM_AUDIT.md
 ```
 
 For most tutorial changes, edit only `demo-data.js`. Scene URLs and scripting examples are documented in [the customization guide](resources/CUSTOMIZATION_GUIDE.md).
@@ -74,7 +75,7 @@ npm run verify
 
 ## Accuracy and limitations
 
-The structures are based on supplied visual references and current first-party product documentation checked on September 23, 2026. They are optimized for repeatable training capture, so some transitions and product capabilities are simulated. Real interfaces vary by operating system, plan, administrator settings, geography, staged rollout, and window size. See [accuracy notes and official sources](resources/ACCURACY_NOTES.md).
+The structures are based on supplied visual references and current first-party product documentation checked on September 23, 2026. They are optimized for repeatable training capture, so some transitions and product capabilities are simulated. Real interfaces vary by operating system, plan, administrator settings, geography, staged rollout, and window size. See [accuracy notes and official sources](resources/ACCURACY_NOTES.md) and the [weighted realism audit](resources/REALISM_AUDIT.md).
 
 ## License and trademarks
 

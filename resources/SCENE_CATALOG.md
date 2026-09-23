@@ -39,6 +39,8 @@ Base path: `/chatgpt/`
 | `search` | Unified search across chats, projects, and files |
 | `project` | Project workspace and instructions |
 | `plugins` | Plugin directory |
+| `scheduled` | Scheduled tasks and their next run times |
+| `sites` | Published Work sites and workspace status |
 
 Extra parameters: `model`, `studio=1`.
 

@@ -3,8 +3,8 @@
   const source = window.CHATGPT_MOCK_DATA;
   const data = JSON.parse(JSON.stringify(source));
   const params = new URLSearchParams(location.search);
-  const scenes = ["chat-home", "chat-response", "work-home", "work-running", "work-complete", "codex-home", "codex-task", "search", "project", "plugins"];
-  const sceneLabels = {"chat-home":"Chat home","chat-response":"Chat response","work-home":"Work home","work-running":"Work task in progress","work-complete":"Completed Work task","codex-home":"Codex home","codex-task":"Codex coding task","search":"Search results","project":"Project workspace","plugins":"Plugin directory"};
+  const scenes = ["chat-home", "chat-response", "work-home", "work-running", "work-complete", "codex-home", "codex-task", "search", "project", "plugins", "scheduled", "sites"];
+  const sceneLabels = {"chat-home":"Chat home","chat-response":"Chat response","work-home":"Work home","work-running":"Work task in progress","work-complete":"Completed Work task","codex-home":"Codex home","codex-task":"Codex coding task","search":"Search results","project":"Project workspace","plugins":"Plugin directory","scheduled":"Scheduled tasks","sites":"Sites gallery"};
   const state = {
     scene: scenes.includes(params.get("scene")) ? params.get("scene") : "chat-home",
     product: "chatgpt",
@@ -52,12 +52,13 @@
     document.querySelector(".account-row strong").textContent=state.userName;
     document.querySelector(".model-picker").childNodes[0].textContent=state.model+" ";
     if(state.product==="codex") nav.innerHTML=`<button class="nav-row active" data-action="new">${icon("compose")}<span>New task</span><kbd>Ctrl N</kbd></button><button class="nav-row" data-action="codex-projects">${icon("folder")}<span>Projects</span></button><button class="nav-row" data-action="environments">${icon("terminal")}<span>Environments</span></button>`;
-    else nav.innerHTML=`<button class="nav-row active" data-action="new">${icon("compose")}<span>New chat</span><kbd>Ctrl N</kbd></button><button class="nav-row" data-action="search">${icon("search")}<span>Search</span></button><button class="nav-row" data-action="library">${icon("library")}<span>Library</span></button><button class="nav-row" data-action="plugins">${icon("plug")}<span>Plugins</span></button>`;
+    else nav.innerHTML=`<button class="nav-row active" data-action="new">${icon("compose")}<span>New chat</span><kbd>Ctrl N</kbd></button><button class="nav-row" data-action="search">${icon("search")}<span>Search</span></button><button class="nav-row" data-action="library">${icon("library")}<span>Library</span></button><button class="nav-row" data-action="plugins">${icon("plug")}<span>Plugins</span></button><button class="nav-row" data-action="scheduled">${icon("clock")}<span>Scheduled</span></button><button class="nav-row" data-action="sites">${icon("grid")}<span>Sites</span></button>`;
     renderProjects();renderRecents();
   }
 
-  function composer(value="",placeholder="Message ChatGPT",id="prompt-form"){
-    return `<form class="composer-shell" id="${id}"><textarea aria-label="${esc(placeholder)}" placeholder="${esc(placeholder)}" rows="2">${esc(value)}</textarea><div class="composer-actions"><button type="button" class="round" data-action="attach" aria-label="Add files">${icon("plus")}</button><button type="button" class="tool-button" data-action="tools">${icon("spark")}<span>Tools</span></button><button type="button" class="round" data-action="voice" aria-label="Voice input">${icon("mic")}</button><button type="submit" class="round send" aria-label="Send">${icon("send")}</button></div></form>`;
+  function composer(value="",placeholder="Message ChatGPT",id="prompt-form",workMode=false){
+    const actions=workMode?`<button type="button" class="round" data-action="attach" aria-label="Add files">${icon("plus")}</button><span class="composer-spacer"></span><button type="button" class="reasoning-pill" data-action="reasoning">Extra High ${icon("chevron")}</button><button type="button" class="round bare" data-action="voice" aria-label="Voice input">${icon("mic")}</button><button type="submit" class="round send voice-send" aria-label="Start task">${icon("wave")}</button>`:`<button type="button" class="round" data-action="attach" aria-label="Add files">${icon("plus")}</button><button type="button" class="tool-button" data-action="tools">${icon("spark")}<span>Tools</span></button><span class="composer-spacer"></span><button type="button" class="reasoning-pill" data-action="reasoning">Instant ${icon("chevron")}</button><button type="button" class="round bare" data-action="voice" aria-label="Voice input">${icon("mic")}</button><button type="submit" class="round send" aria-label="Send">${icon("send")}</button>`;
+    return `<form class="composer-shell${workMode?" work-composer":""}" id="${id}"><textarea aria-label="${esc(placeholder)}" placeholder="${esc(placeholder)}" rows="2">${esc(value)}</textarea><div class="composer-actions">${actions}</div></form>`;
   }
 
   function renderChatHome(){
@@ -67,7 +68,7 @@
 
   function renderWorkHome(){
     workspace.className="workspace home-view work-home";
-    workspace.innerHTML=`<div class="home-inner"><span class="work-kicker">ChatGPT Work</span><h1>What should we work on, ${esc(firstName())}?</h1>${composer(state.prompt,"Describe the outcome you want","work-form")}<div class="work-suggestion-grid">${data.workSuggestions.map(s=>`<button data-work-suggestion="${esc(s.label)}"><span>${icon(s.icon)}</span><strong>${esc(s.label)}</strong><small>${esc(s.detail)}</small></button>`).join("")}</div></div>`;
+    workspace.innerHTML=`<div class="home-inner"><h1>What would you like to work on?</h1>${composer(state.prompt,"Do anything","work-form",true)}<div class="work-connections"><span class="connections-label">Connected apps</span>${data.workConnections.map(c=>`<button class="connection-row" data-work-suggestion="Use ${esc(c.name)} for this task"><span class="connection-logo ${esc(c.tone)}">${esc(c.icon)}</span><span><strong>${esc(c.name)}</strong><small>${esc(c.detail)}</small></span><em>${esc(c.status)}</em></button>`).join("")}</div><div class="work-quick-actions">${data.workSuggestions.map(s=>`<button data-work-suggestion="${esc(s.label)}">${icon(s.icon)}<span>${esc(s.label)}</span></button>`).join("")}</div></div>`;
   }
 
   function responseComposer(){return `<div class="fixed-composer">${composer("","Ask a follow-up","followup-form")}</div>`;}
@@ -103,6 +104,8 @@
     let title="",subtitle="",cards=[];
     if(kind==="project"){title="Project Phoenix";subtitle="Shared files, instructions, and conversations.";cards=[{icon:"chat",title:"Launch readiness summary",text:"Work · Updated today"},{icon:"document",title:"Launch plan.pdf",text:"Document · Added yesterday"},{icon:"slides",title:"Leadership briefing",text:"Work · 8 slides"}];}
     else if(kind==="plugins"){title="Plugins";subtitle="Extend ChatGPT with approved tools, skills, and app templates.";cards=[{icon:"search",title:"Deep research",text:"Research across the web and connected sources"},{icon:"slides",title:"Presentations",text:"Build and refine presentation files"},{icon:"chart",title:"Data analysis",text:"Analyze spreadsheets and create charts"}];}
+    else if(kind==="scheduled"){title="Scheduled";subtitle="Work that ChatGPT can run once, on a schedule, or when something changes.";cards=data.schedules.map(x=>({icon:"clock",title:x.title,text:x.detail}));}
+    else if(kind==="sites"){title="Sites";subtitle="Interactive sites and dashboards created with ChatGPT Work.";cards=data.sites.map(x=>({icon:"grid",title:x.title,text:x.detail}));}
     else{title="Library";subtitle="Files and creations from your ChatGPT workspace.";cards=[{icon:"image",title:"Launch visual",text:"Image · Today"},{icon:"document",title:"Executive summary",text:"Document · Today"},{icon:"slides",title:"Q3 planning deck",text:"Presentation · Yesterday"}];}
     workspace.className="workspace collection";workspace.innerHTML=`<div class="collection-inner"><h1>${esc(title)}</h1><p>${esc(subtitle)}</p><div class="card-grid">${cards.map(c=>`<button class="collection-card" data-action="open-card"><span class="card-icon">${icon(c.icon)}</span><strong>${esc(c.title)}</strong><small>${esc(c.text)}</small><em>Open</em></button>`).join("")}</div></div>`;
   }
@@ -123,7 +126,7 @@
     if(!scenes.includes(scene))scene="chat-home";state.scene=scene;searchOverlay.hidden=true;
     if(scene.startsWith("codex")){state.product="codex";state.experience="chat";}else{state.product="chatgpt";state.experience=scene.startsWith("work")?"work":"chat";}
     syncSidebar();
-    ({"chat-home":renderChatHome,"chat-response":renderChatResponse,"work-home":renderWorkHome,"work-running":()=>renderWorkTask(false),"work-complete":()=>renderWorkTask(true),"codex-home":renderCodexHome,"codex-task":renderCodexTask,"search":renderSearch,"project":()=>renderCollection("project"),"plugins":()=>renderCollection("plugins")}[scene]||renderChatHome)();
+    ({"chat-home":renderChatHome,"chat-response":renderChatResponse,"work-home":renderWorkHome,"work-running":()=>renderWorkTask(false),"work-complete":()=>renderWorkTask(true),"codex-home":renderCodexHome,"codex-task":renderCodexTask,"search":renderSearch,"project":()=>renderCollection("project"),"plugins":()=>renderCollection("plugins"),"scheduled":()=>renderCollection("scheduled"),"sites":()=>renderCollection("sites")}[scene]||renderChatHome)();
   }
 
   function applyStudio(){state.userName=document.querySelector("#studio-name").value.trim()||data.user.name;state.prompt=document.querySelector("#studio-prompt").value.trim();state.model=document.querySelector("#studio-model").value;setScene(document.querySelector("#studio-scene").value);toast("Tutorial scene updated");}
@@ -147,12 +150,15 @@
       case"close-search":openSearch(false);break;
       case"library":renderCollection("library");break;
       case"plugins":setScene("plugins");break;
+      case"scheduled":setScene("scheduled");break;
+      case"sites":setScene("sites");break;
       case"codex-projects":setScene("codex-home");break;
       case"environments":toast("Local and cloud environments are ready to stage");break;
       case"new-codex":setScene("codex-home");break;
       case"open-codex-task":setScene("codex-task");break;
       case"attach":toast("Add fake files or local context");break;
       case"tools":toast("Search, images, data analysis, and research");break;
+      case"reasoning":toast(state.experience==="work"?"Extra High reasoning selected":"Reasoning menu opened");break;
       case"voice":b.classList.toggle("recording");toast(b.classList.contains("recording")?"Listening…":"Voice input stopped");break;
       case"copy-response":navigator.clipboard?.writeText("Demo response").catch(()=>{});toast("Response copied");break;
       case"good-response":toast("Feedback recorded");break;

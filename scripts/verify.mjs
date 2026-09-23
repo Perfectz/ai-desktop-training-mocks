@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const products = {
   microsoft: ["home", "chat", "chat-response", "search-results", "workflow-agent", "workflow-complete", "running", "approval", "complete", "tasks", "scheduled", "customize"],
-  chatgpt: ["chat-home", "chat-response", "work-home", "work-running", "work-complete", "codex-home", "codex-task", "search", "project", "plugins"],
+  chatgpt: ["chat-home", "chat-response", "work-home", "work-running", "work-complete", "codex-home", "codex-task", "search", "project", "plugins", "scheduled", "sites"],
   claude: ["home", "response", "task-running", "task-complete", "artifact", "research", "project", "code", "scheduled"]
 };
 

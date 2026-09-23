@@ -1,6 +1,6 @@
 window.CLAUDE_MOCK_DATA = {
   user: { name: "Elvia Atkins", initials: "EA", plan: "Claude Pro" },
-  models: ["Claude Opus 4.8", "Claude Sonnet 5", "Auto"],
+  models: ["Claude Opus 5.5", "Claude Sonnet 5", "Auto"],
   recents: [
     { title: "Prepare launch materials", kind: "Task", time: "Today" },
     { title: "Team planning questions", kind: "Chat", time: "Today" },

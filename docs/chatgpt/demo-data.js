@@ -12,6 +12,11 @@ window.CHATGPT_MOCK_DATA = {
     { label: "Research a market", detail: "Gather sources and produce a report", icon: "search" },
     { label: "Analyze a spreadsheet", detail: "Find trends and create charts", icon: "chart" }
   ],
+  workConnections: [
+    { name: "Google Calendar", detail: "Create and manage events on your calendar", icon: "31", tone: "calendar", status: "Connected" },
+    { name: "Slack", detail: "Read and write messages on Slack", icon: "✣", tone: "slack", status: "Connect" },
+    { name: "Gmail", detail: "Find and reference emails from your inbox", icon: "M", tone: "gmail", status: "Connect" }
+  ],
   recents: [
     { title: "Launch readiness summary", kind: "Work", time: "Today" },
     { title: "Customer onboarding ideas", kind: "Chat", time: "Today" },
@@ -49,5 +54,15 @@ window.CHATGPT_MOCK_DATA = {
     { title: "Launch readiness summary", type: "Work", snippet: "Prepared the launch narrative and action list…" },
     { title: "Project Phoenix", type: "Project", snippet: "Files, instructions, and conversations for the launch…" },
     { title: "Launch plan.pdf", type: "Document", snippet: "Milestones, owners, launch channels, and timing…" }
+  ],
+  schedules: [
+    { title: "Monday leadership brief", detail: "Every Monday at 8:00 AM · Active" },
+    { title: "Daily launch-risk monitor", detail: "Every weekday at 4:30 PM · Active" },
+    { title: "Customer feedback digest", detail: "When new feedback arrives · Paused" }
+  ],
+  sites: [
+    { title: "Project Phoenix launch hub", detail: "Site · Updated today" },
+    { title: "Revenue forecast planner", detail: "Site · Updated yesterday" },
+    { title: "Event operations dashboard", detail: "Site · Last opened Monday" }
   ]
 };
