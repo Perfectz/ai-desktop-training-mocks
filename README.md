@@ -1,6 +1,6 @@
 # AI Desktop Training Mocks
 
-Capture-ready, editable interface mocks for building tutorials about Microsoft 365 Copilot, ChatGPT desktop with Work and Codex, and Claude Desktop.
+Capture-ready, editable interface mocks for building tutorials about Microsoft 365 Copilot, ChatGPT desktop with Work and Codex, Claude Desktop, and the Claude Code CLI.
 
 **Live toolkit:** https://perfectz.github.io/ai-desktop-training-mocks/
 
@@ -13,8 +13,9 @@ These are independent static training props—not product clones connected to re
 | Microsoft 365 Copilot | Chat, Cowork tasks, Work IQ, Workflow agent, approvals, task history, schedules, customization | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/microsoft/) |
 | ChatGPT desktop | Chat, Work, connected apps, unified Recents, Projects, search, scheduled work, Sites, plugins, Codex task and diff views | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/chatgpt/) |
 | Claude Desktop | Unified Claude chats and tasks, Artifacts, Research, Projects, scheduled work, Claude Code | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/claude/) |
+| Claude Code CLI | Scriptable terminal: typed prompts, spinner, tool calls, diffs, todos, permission prompts, plan mode, captions, playback controls | [Launch mock](https://perfectz.github.io/ai-desktop-training-mocks/claude-code/) |
 
-Across the three products, 33 deterministic scenes provide capture automation, editable fake data, a hidden tutorial studio, responsive layouts, inline SVG icons, and a small JavaScript control API.
+Every mock shares one data layer ([`docs/shared/mockkit.js`](docs/shared/mockkit.js)): press `Alt+E` to edit any displayed content as JSON, save it in your browser, download or load a JSON file, or copy a short share link that reproduces your edits. Each mock also has deterministic scene URLs, a tutorial studio (`Alt+D`), light and dark themes, and a `TrainingMock` JavaScript API for scripted typing and streamed replies.
 
 ## Fastest way to stage a tutorial
 
@@ -30,9 +31,24 @@ Example capture URLs:
 https://perfectz.github.io/ai-desktop-training-mocks/microsoft/?scene=workflow-agent&name=Jordan%20Lee
 https://perfectz.github.io/ai-desktop-training-mocks/chatgpt/?scene=work-running&prompt=Prepare%20a%20launch%20brief
 https://perfectz.github.io/ai-desktop-training-mocks/claude/?scene=artifact&name=Jordan%20Lee&permission=auto
+https://perfectz.github.io/ai-desktop-training-mocks/claude-code/?session=plan-feature&autoplay=1&clean=1&full=1
 ```
 
 ## Edit the demo content
+
+### Live, without touching code
+
+1. Open any mock and press `Alt+E`.
+2. Change any value in the JSON. For example, rename the user, add a conversation, or rewrite a task's steps.
+3. Select **Apply** (`Ctrl+Enter`). Select **Apply & save** to keep the change in this browser, or **Copy share link** to get a URL that carries only your edits.
+
+You can also load data from a file with `?data=./my-lesson.json`, reset to the defaults with `?nosave=1`, and hide all training chrome for recording with `?clean=1`.
+
+### Conversations are data
+
+The Claude, ChatGPT, and Copilot mocks render conversations from a `conversations` map in `demo-data.js`. Messages are markdown, and assistant turns can include thinking, sources, tools, attachments, or artifacts. Open any conversation with `?chat=<id>`. The Claude Code terminal plays back `sessions`, which are scripts of steps. See [the Claude Code guide](resources/CLAUDE_CODE_CLI.md).
+
+### In the source files
 
 Each product is fully self-contained:
 
@@ -45,9 +61,13 @@ docs/
     app.js           scenes and interactions
   chatgpt/
   claude/
+  claude-code/       scriptable Claude Code terminal (sessions in demo-data.js)
+  shared/
+    mockkit.js       live data editor, JSON loading, share links, clean capture mode
 resources/
   SCENE_CATALOG.md
   CUSTOMIZATION_GUIDE.md
+  CLAUDE_CODE_CLI.md
   TUTORIAL_AUTHORING_GUIDE.md
   HYPERFRAMES_REMOTION.md
   RECORDING_CHECKLIST.md

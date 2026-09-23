@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scriptable Claude Code terminal mock for tutorial videos. Fictional data only." />
+  <title>Claude Code CLI — Training Mock</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="stage">
+    <div class="window" id="window">
+      <!-- Windows Terminal chrome -->
+      <div class="chrome chrome-windows" aria-hidden="true">
+        <div class="wt-tab"><span class="wt-tab-icon">&gt;_</span><span class="wt-tab-title" data-bind="title">claude</span><span class="wt-tab-x">✕</span></div>
+        <div class="wt-new">＋</div><div class="wt-drop">⌄</div>
+        <div class="wt-drag"></div>
+        <div class="wt-ctl">―</div><div class="wt-ctl">▢</div><div class="wt-ctl wt-close">✕</div>
+      </div>
+      <!-- macOS Terminal chrome -->
+      <div class="chrome chrome-mac" aria-hidden="true">
+        <div class="lights"><i></i><i></i><i></i></div>
+        <div class="mac-title"><span class="mac-folder">▭</span> <span data-bind="macTitle">training-mock-kit — claude</span></div>
+      </div>
+      <main class="term" id="term" tabindex="-1">
+        <div class="transcript" id="transcript" aria-live="polite"></div>
+        <div class="live" id="live"></div>
+        <div class="prompt-area" id="prompt-area">
+          <div class="input-box" id="input-box">
+            <span class="caret-char">&gt;</span>
+            <div class="input-line"><span id="input-text"></span><span class="cursor" id="cursor">&nbsp;</span><span class="placeholder" id="placeholder"></span></div>
+            <textarea id="input-capture" rows="1" aria-label="Type a prompt for Claude" autocomplete="off" spellcheck="false"></textarea>
+          </div>
+          <div class="slash-menu" id="slash-menu"></div>
+          <div class="status-line" id="status-line"><span id="status-left"></span><span id="status-right"></span></div>
+        </div>
+      </main>
+    </div>
+    <div class="caption" id="caption"></div>
+  </div>
+
+  <nav class="controls studio-launcher" id="controls" data-mk-chrome aria-label="Playback controls">
+    <select id="session-select" aria-label="Session"></select>
+    <button data-ctl="restart" title="Restart (R)">⏮</button>
+    <button data-ctl="prev" title="Previous step (←)">◀</button>
+    <button data-ctl="toggle" class="play" title="Play / pause (Space)">▶</button>
+    <button data-ctl="next" title="Next step (→)">▶|</button>
+    <span class="step-count" id="step-count">0 / 0</span>
+    <select id="speed-select" aria-label="Speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option><option value="4">4×</option></select>
+    <button data-ctl="theme" title="Toggle light/dark">◐</button>
+    <button data-ctl="chrome" title="Cycle window chrome">▣</button>
+    <button data-ctl="data" title="Edit demo data (Alt+E)">{ }</button>
+    <button data-ctl="help" title="Shortcuts (?)">?</button>
+  </nav>
+  <div class="help-card" id="help-card" data-mk-chrome hidden>
+    <strong>Claude Code terminal mock</strong>
+    <p>Script-driven fake terminal for tutorial recordings. All data is fictional.</p>
+    <ul>
+      <li><kbd>Space</kbd> play / pause · <kbd>→</kbd> next step · <kbd>←</kbd> previous · <kbd>R</kbd> restart</li>
+      <li><kbd>Alt</kbd>+<kbd>E</kbd> edit demo data (sessions, welcome box, responses)</li>
+      <li>Click the input box to type your own prompts; <kbd>Shift</kbd>+<kbd>Tab</kbd> cycles modes; <kbd>/</kbd> opens the slash menu</li>
+      <li>URL: <code>?session=init&amp;autoplay=1&amp;speed=1.5&amp;theme=light&amp;chrome=mac&amp;clean=1</code></li>
+      <li><code>?step=12</code> renders the first 12 steps instantly (for stills)</li>
+    </ul>
+    <button data-ctl="help">Close</button>
+  </div>
+
+  <script src="./demo-data.js"></script>
+  <script src="../shared/mockkit.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

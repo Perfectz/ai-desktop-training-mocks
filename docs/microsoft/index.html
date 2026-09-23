@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Editable Microsoft Copilot Cowork interface mock for tutorial production." />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Copilot Cowork — Training Mock</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%232563eb'/%3E%3Cstop offset='.5' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%2300a4ef'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='3' y='3' width='26' height='26' rx='9' fill='url(%23g)'/%3E%3Cpath d='M10 11h8a5 5 0 010 10h-6a4 4 0 010-8h9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <meta name="description" content="Editable Microsoft 365 Copilot (Chat + Cowork) interface mock for tutorial production." />
+    <meta name="theme-color" content="#f5f5f5" />
+    <title>Microsoft 365 Copilot — Training Mock</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%231B6CF2'/%3E%3Cstop offset='1' stop-color='%2327D1A6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237B4DF0'/%3E%3Cstop offset='.5' stop-color='%23E4468C'/%3E%3Cstop offset='1' stop-color='%23F7A42B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M8.6 2.4h6.3c1.4 0 2.3 1.3 1.9 2.6l-3.1 9.2c-.5 1.4-1.7 2.3-3.1 2.3H4.4c-1.4 0-2.3-1.3-1.9-2.6l3-9.2c.5-1.4 1.7-2.3 3.1-2.3z' fill='url(%23a)'/%3E%3Cpath d='M15.4 21.6H9.1c-1.4 0-2.3-1.3-1.9-2.6l3.1-9.2c.5-1.4 1.7-2.3 3.1-2.3h6.2c1.4 0 2.3 1.3 1.9 2.6l-3 9.2c-.5 1.4-1.7 2.3-3.1 2.3z' fill='url(%23b)'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
       <symbol id="icon-compose" viewBox="0 0 20 20"><path d="M10.5 4a.5.5 0 0 1 0 1H6a2 2 0 0 0-2 2v7c0 1.1.9 2 2 2h7a2 2 0 0 0 2-2V9.5a.5.5 0 1 1 1 0V14a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm5.65-.85a.5.5 0 1 1 .7.7l-7.79 7.8L8 12l.35-1.06z"/></symbol>
       <symbol id="icon-grid-dots" viewBox="0 0 20 20"><path d="M4.25 14.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m5.75 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m5.75 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M4.25 8.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m5.75 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m5.75 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M4.25 3a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M10 3a1.25 1.25 0 1 1 0 2.5A1.25 1.25 0 0 1 10 3m5.75 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5"/></symbol>
       <symbol id="icon-clipboard-task" viewBox="0 0 20 20"><path d="M12.85 9.85a.5.5 0 0 0-.7-.7L9 12.29l-1.15-1.14a.5.5 0 0 0-.7.7l1.5 1.5c.2.2.5.2.7 0zM8.5 2c-.65 0-1.2.42-1.41 1H5.5C4.67 3 4 3.67 4 4.5v12c0 .83.67 1.5 1.5 1.5h9c.83 0 1.5-.67 1.5-1.5v-12c0-.83-.67-1.5-1.5-1.5h-1.59c-.2-.58-.76-1-1.41-1zM8 3.5c0-.28.22-.5.5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M5.5 4h1.59c.2.58.76 1 1.41 1h3c.65 0 1.2-.42 1.41-1h1.59c.28 0 .5.22.5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12c0-.28.22-.5.5-.5"/></symbol>
@@ -49,101 +49,132 @@
       <symbol id="icon-chevron-left" viewBox="0 0 20 20"><path d="M12.85 3.15a.5.5 0 0 1 0 .7L6.71 10l6.14 6.15a.5.5 0 0 1-.7.7l-6.5-6.5a.5.5 0 0 1 0-.7l6.5-6.5a.5.5 0 0 1 .7 0"/></symbol>
       <symbol id="icon-chevron-right" viewBox="0 0 20 20"><path d="M7.15 3.15a.5.5 0 0 0 0 .7L13.29 10l-6.14 6.15a.5.5 0 0 0 .7.7l6.5-6.5a.5.5 0 0 0 0-.7l-6.5-6.5a.5.5 0 0 0-.7 0"/></symbol>
       <symbol id="icon-cloud" viewBox="0 0 20 20"><path d="M7.5 5a4.5 4.5 0 0 1 4.32 3.23A3.5 3.5 0 1 1 13.5 15H6a4 4 0 0 1-.48-7.97A4.5 4.5 0 0 1 7.5 5m0 1a3.5 3.5 0 0 0-3.34 2.45.5.5 0 0 1-.46.35A3 3 0 0 0 6 14h7.5a2.5 2.5 0 1 0-1.98-4.03.5.5 0 0 1-.88-.22A3.5 3.5 0 0 0 7.5 6"/></symbol>
+      <!-- Copilot logo (multicolour) -->
+      <defs><linearGradient id="cp-g1" x1="3" y1="3" x2="15" y2="15" gradientUnits="userSpaceOnUse"><stop stop-color="#1B6CF2"/><stop offset=".55" stop-color="#1FA2E5"/><stop offset="1" stop-color="#27D1A6"/></linearGradient>
+      <linearGradient id="cp-g2" x1="10" y1="9" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#7B4DF0"/><stop offset=".5" stop-color="#E4468C"/><stop offset="1" stop-color="#F7A42B"/></linearGradient>
+      <linearGradient id="cp-g3" x1="9" y1="9" x2="15" y2="15" gradientUnits="userSpaceOnUse"><stop stop-color="#3D5CF5"/><stop offset="1" stop-color="#9B49E6"/></linearGradient></defs>
+      <symbol id="copilot-logo" viewBox="0 0 24 24"><path d="M8.6 2.4h6.3c1.4 0 2.3 1.3 1.9 2.6l-3.1 9.2c-.5 1.4-1.7 2.3-3.1 2.3H4.4c-1.4 0-2.3-1.3-1.9-2.6l3-9.2c.5-1.4 1.7-2.3 3.1-2.3z" fill="url(#cp-g1)"/><path d="M15.4 21.6H9.1c-1.4 0-2.3-1.3-1.9-2.6l3.1-9.2c.5-1.4 1.7-2.3 3.1-2.3h6.2c1.4 0 2.3 1.3 1.9 2.6l-3 9.2c-.5 1.4-1.7 2.3-3.1 2.3z" fill="url(#cp-g2)"/><path d="M10.3 9.8c.5-1.4 1.7-2.3 3.1-2.3h1.6l-1.3 3.8-.9 2.9c-.5 1.4-1.7 2.3-3.1 2.3H8.2l1.2-3.7z" fill="url(#cp-g3)" opacity=".92"/></symbol>
+
+      <!-- Office file-type icons -->
+      <symbol id="ft-word" viewBox="0 0 20 20"><rect x="6" y="2.5" width="12" height="15" rx="1.6" fill="#41A5EE"/><path d="M11.5 7h4.5M11.5 10h4.5M11.5 13h4.5" stroke="#fff" stroke-width="1.1" opacity=".85"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#185ABD"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">W</text></symbol>
+      <symbol id="ft-excel" viewBox="0 0 20 20"><rect x="6" y="2.5" width="12" height="15" rx="1.6" fill="#33C481"/><path d="M11.5 7h4.5M11.5 10h4.5M11.5 13h4.5M14 3v14" stroke="#fff" stroke-width="1.1" opacity=".75"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#107C41"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">X</text></symbol>
+      <symbol id="ft-powerpoint" viewBox="0 0 20 20"><circle cx="12.5" cy="10" r="7.2" fill="#FF8F6B"/><path d="M12.5 2.8A7.2 7.2 0 0 1 19.7 10h-7.2z" fill="#ED6C47"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#C43E1C"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">P</text></symbol>
+      <symbol id="ft-outlook" viewBox="0 0 20 20"><rect x="6" y="3.5" width="12" height="13" rx="1.6" fill="#28A8EA"/><path d="m6.5 7.5 5.75 3.6L18 7.5" fill="none" stroke="#fff" stroke-width="1.1" opacity=".9"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#0F6CBD"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">O</text></symbol>
+      <symbol id="ft-teams" viewBox="0 0 20 20"><circle cx="15.4" cy="5.2" r="2.2" fill="#7B83EB"/><rect x="11" y="8" width="8" height="8" rx="2.4" fill="#7B83EB"/><circle cx="10.6" cy="4.4" r="2.6" fill="#5059C9"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#4B53BC"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">T</text></symbol>
+      <symbol id="ft-onenote" viewBox="0 0 20 20"><rect x="6" y="2.5" width="12" height="15" rx="1.6" fill="#BA7FE2"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#7719AA"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">N</text></symbol>
+      <symbol id="ft-sharepoint" viewBox="0 0 20 20"><circle cx="12" cy="7" r="4.5" fill="#036C70"/><circle cx="15" cy="11.5" r="3.6" fill="#1A9BA1"/><circle cx="12" cy="15" r="2.8" fill="#37C6D0"/><rect x="2" y="5.5" width="9" height="9" rx="1.5" fill="#03787C"/><text x="6.5" y="12.5" font-size="6.4" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">S</text></symbol>
+      <symbol id="ft-loop" viewBox="0 0 20 20"><rect x="2.5" y="2.5" width="15" height="15" rx="4" fill="#6B4BD8"/><path d="M7.2 13.2V9a2.8 2.8 0 1 1 2.8 2.8H7.2m5.6-5v4.2A2.8 2.8 0 1 1 10 8.2h2.8" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></symbol>
+      <symbol id="ft-pdf" viewBox="0 0 20 20"><path d="M5 2.5h7l4 4v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1z" fill="#fff" stroke="#C8C6C4"/><path d="M12 2.5v4h4" fill="none" stroke="#C8C6C4"/><rect x="2" y="9.5" width="12" height="6" rx="1.2" fill="#D13438"/><text x="8" y="14.1" font-size="4.3" font-weight="700" fill="#fff" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif">PDF</text></symbol>
+      <symbol id="ft-web" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5" fill="#EBF3FC" stroke="#0F6CBD" stroke-width="1.1"/><path d="M2.6 10h14.8M10 2.5c2.2 2.2 2.9 4.8 2.9 7.5S12.2 15.3 10 17.5M10 2.5C7.8 4.7 7.1 7.3 7.1 10s.7 5.3 2.9 7.5" fill="none" stroke="#0F6CBD" stroke-width="1.1"/></symbol>
+      <symbol id="ft-person" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#E8EBFA"/><circle cx="10" cy="8" r="3" fill="#5B5FC7"/><path d="M4.8 15.3c1.1-2 3-3 5.2-3s4.1 1 5.2 3" fill="#5B5FC7"/></symbol>
+      <symbol id="ft-meeting" viewBox="0 0 20 20"><rect x="2.5" y="3.5" width="15" height="14" rx="2.2" fill="#fff" stroke="#5B5FC7" stroke-width="1.1"/><path d="M2.5 7.5h15" stroke="#5B5FC7" stroke-width="1.1"/><rect x="2.5" y="3.5" width="15" height="4" rx="2" fill="#5B5FC7"/><path d="M6 10.5h2M9 10.5h2M12 10.5h2M6 13.5h2M9 13.5h2" stroke="#5B5FC7" stroke-width="1.3"/></symbol>
+      <symbol id="ft-image" viewBox="0 0 20 20"><rect x="2.5" y="3.5" width="15" height="13" rx="2.2" fill="#FCE9F3"/><circle cx="7" cy="8" r="1.6" fill="#E3008C"/><path d="m3.5 15 4.5-4.2 3 2.7 2.5-2.2 3.5 3.7" fill="none" stroke="#E3008C" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+      <symbol id="ft-video" viewBox="0 0 20 20"><rect x="2.5" y="4.5" width="11" height="11" rx="2.2" fill="#FDEADA"/><path d="m13.5 8.5 4-2.2v7.4l-4-2.2" fill="#DA3B01"/><path d="m6.5 7.8 4 2.2-4 2.2z" fill="#DA3B01"/></symbol>
+
+      <!-- Extra Fluent-style 20px regular icons -->
+      <symbol id="icon-globe" viewBox="0 0 20 20"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16m2.43 11.5H7.57c.51 1.97 1.44 3.2 2.43 3.46.99-.26 1.92-1.49 2.43-3.46m-5.88 0H3.94a7 7 0 0 0 4.1 3.21c-.66-.8-1.2-1.93-1.5-3.21m9.51 0h-2.61c-.3 1.28-.84 2.41-1.5 3.21a7 7 0 0 0 4.1-3.21M6.37 8.5H3.2a7 7 0 0 0 .22 4h2.95a14 14 0 0 1 0-4m6.25 0H7.38a13 13 0 0 0 0 4h5.24a13 13 0 0 0 0-4m4.17 0h-3.16a14 14 0 0 1 0 4h2.95a7 7 0 0 0 .21-4M8.04 3.29A7 7 0 0 0 3.54 7.5h2.97c.3-1.73.94-3.2 1.53-4.21m1.96-.26c-1 .27-1.95 1.54-2.46 3.47h4.92c-.51-1.93-1.46-3.2-2.46-3.47m1.96.26c.59 1 1.23 2.48 1.53 4.21h2.97a7 7 0 0 0-4.5-4.21"/></symbol>
+      <symbol id="icon-briefcase" viewBox="0 0 20 20"><path d="M7.5 3h5c.83 0 1.5.67 1.5 1.5V6h1.5A2.5 2.5 0 0 1 18 8.5v6a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 2 14.5v-6A2.5 2.5 0 0 1 4.5 6H6V4.5C6 3.67 6.67 3 7.5 3m0 1a.5.5 0 0 0-.5.5V6h6V4.5a.5.5 0 0 0-.5-.5zm-3 3C3.67 7 3 7.67 3 8.5v6c0 .83.67 1.5 1.5 1.5h11c.83 0 1.5-.67 1.5-1.5v-6c0-.83-.67-1.5-1.5-1.5z"/></symbol>
+      <symbol id="icon-share" viewBox="0 0 20 20"><path d="M11.5 3.15a.5.5 0 0 1 .54.1l5.8 5.4a.5.5 0 0 1 0 .72l-5.8 5.5a.5.5 0 0 1-.84-.37V11.9c-2.7.1-4.9 1.03-6.72 3.02a.5.5 0 0 1-.86-.4C4.16 9.6 6.64 6.98 11.2 6.6V3.6c0-.2.11-.37.3-.45M12.2 4.8v2.28a.5.5 0 0 1-.48.5C8.1 7.73 5.94 9.5 5 13.1c1.86-1.5 4.07-2.2 6.68-2.2h.02a.5.5 0 0 1 .5.5v2.3l4.56-4.33z"/></symbol>
+      <symbol id="icon-pages" viewBox="0 0 20 20"><path d="M6 2a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h3.2l.27-1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4v3.5c0 .83.67 1.5 1.5 1.5H15v1.3q.47-.19 1-.2V7.4c0-.4-.16-.78-.44-1.06l-3.91-3.91A1.5 1.5 0 0 0 10.59 2zm8.8 5h-3.3a.5.5 0 0 1-.5-.5V3.2zm-4.22 7.73 4.83-4.83a1.87 1.87 0 1 1 2.64 2.64l-4.83 4.83q-.42.41-.98.56l-1.5.37a.6.6 0 0 1-.73-.73l.37-1.5q.15-.56.56-.98z"/></symbol>
+      <symbol id="icon-chart" viewBox="0 0 20 20"><path d="M11 3.5C11 2.67 11.67 2 12.5 2h1c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v13c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5zM6 7.5C6 6.67 6.67 6 7.5 6h1c.83 0 1.5.67 1.5 1.5v9c0 .83-.67 1.5-1.5 1.5h-1A1.5 1.5 0 0 1 6 16.5zM7.5 7a.5.5 0 0 0-.5.5v9c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-6 4.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5H3a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5zm13-3.5c0-.83.67-1.5 1.5-1.5h.5v1H17.5a.5.5 0 0 0-.5.5v9c0 .28.22.5.5.5h.5v1h-.5a1.5 1.5 0 0 1-1.5-1.5z"/></symbol>
+      <symbol id="icon-flow" viewBox="0 0 20 20"><path d="M3 4.5C3 3.67 3.67 3 4.5 3h3C8.33 3 9 3.67 9 4.5v3C9 8.33 8.33 9 7.5 9H6.5v2.5c0 .83.67 1.5 1.5 1.5h3v-.5c0-.83.67-1.5 1.5-1.5h3c.83 0 1.5.67 1.5 1.5v3c0 .83-.67 1.5-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5V14H8a2.5 2.5 0 0 1-2.5-2.5V9h-1A1.5 1.5 0 0 1 3 7.5zM4.5 4a.5.5 0 0 0-.5.5v3c0 .28.22.5.5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm8 8a.5.5 0 0 0-.5.5v3c0 .28.22.5.5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/></symbol>
+      <symbol id="icon-people" viewBox="0 0 20 20"><path d="M7.5 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6m-2 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0m8-1.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M12 7a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0m-9.5 4A1.5 1.5 0 0 0 1 12.5v.36c0 1.14.63 2.07 1.55 2.66.9.6 2.1.93 3.45.98q.72.02 1.5-.04c1.35-.05 2.54-.39 3.45-.98.92-.6 1.55-1.52 1.55-2.66v-.32A1.5 1.5 0 0 0 11 11zM2 12.5c0-.28.22-.5.5-.5H11c.28 0 .5.22.5.5v.36c0 .7-.37 1.3-1.1 1.77-.72.48-1.79.8-3.15.87h-.5c-1.36-.06-2.42-.4-3.15-.87C2.87 14.16 2 13.57 2 12.86zm12.5 3.5q-.65 0-1.28-.1.37-.4.6-.92h.68c.95 0 1.66-.2 2.12-.52.44-.3.68-.73.68-1.33a.9.9 0 0 0-.1-.43.2.2 0 0 0-.1-.14l-.2-.06h-3.66a2.5 2.5 0 0 0-.51-1h4.17c.83 0 1.6.6 1.6 1.63 0 .95-.42 1.71-1.14 2.2-.7.48-1.67.67-2.86.67"/></symbol>
+      <symbol id="icon-sparkle" viewBox="0 0 20 20"><path d="M7.4 12.8a1.04 1.04 0 0 0 1.59-.51l.45-1.37a2.34 2.34 0 0 1 1.47-1.48l1.4-.45A1.04 1.04 0 0 0 12.25 7l-1.37-.45A2.34 2.34 0 0 1 9.4 5.08L8.95 3.7a1.03 1.03 0 0 0-.82-.68 1.04 1.04 0 0 0-1.15.7l-.46 1.4a2.34 2.34 0 0 1-1.44 1.45L3.7 7a1.04 1.04 0 0 0 .02 1.97l1.37.45a2.33 2.33 0 0 1 1.48 1.48l.45 1.4c.07.2.2.37.38.5m.2-1.72-.35-1.07a3.34 3.34 0 0 0-2.1-2.11l-1.07-.35 1.1-.36a3.34 3.34 0 0 0 2.06-2.11l.35-1.07.35 1.08a3.34 3.34 0 0 0 2.1 2.1l1.09.35-1.08.35a3.33 3.33 0 0 0-2.1 2.11zm6.2 5.73a.8.8 0 0 0 1.22-.4l.25-.76a1.1 1.1 0 0 1 .68-.68l.77-.25a.8.8 0 0 0-.02-1.52l-.77-.25a1.1 1.1 0 0 1-.68-.68l-.25-.77a.8.8 0 0 0-1.52.01l-.25.77a1.1 1.1 0 0 1-.66.68l-.78.25a.8.8 0 0 0 0 1.52l.77.25a1.1 1.1 0 0 1 .68.68l.25.77c.06.16.16.3.3.39m-.1-2.4a2 2 0 0 0-.4-.4 2 2 0 0 0 .44-.46q.18.24.41.41-.23.18-.4.41z"/></symbol>
+      <symbol id="icon-paint" viewBox="0 0 20 20"><path d="M10 2a8 8 0 0 0 0 16c1.3 0 2-.8 2-1.8 0-.45-.17-.86-.44-1.18a.7.7 0 0 1-.16-.47c0-.45.35-.8.8-.8h1.6a4.2 4.2 0 0 0 4.2-4.2C18 5.3 14.4 2 10 2m0 1c3.9 0 7 2.86 7 6.55a3.2 3.2 0 0 1-3.2 3.2h-1.6a1.8 1.8 0 0 0-1.38 2.97c.12.14.18.3.18.48 0 .45-.3.8-1 .8a7 7 0 0 1 0-14M6.5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m2-3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3.5 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m2.5 2.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/></symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 20 20"><path d="M9.65 3.15a.5.5 0 0 1 .7 0l5.5 5.5a.5.5 0 0 1-.7.7L10.5 4.71V16.5a.5.5 0 0 1-1 0V4.7L4.85 9.36a.5.5 0 1 1-.7-.7z"/></symbol>
+      <symbol id="icon-stop" viewBox="0 0 20 20"><rect x="5" y="5" width="10" height="10" rx="2"/></symbol>
+      <symbol id="icon-edit" viewBox="0 0 20 20"><path d="M17.18 2.93a2.97 2.97 0 0 0-4.26-.06l-9.37 9.38c-.33.33-.56.74-.66 1.2l-.88 3.94a.5.5 0 0 0 .6.6l3.93-.87c.46-.1.89-.34 1.22-.68l9.36-9.36a2.97 2.97 0 0 0 .06-4.15m-3.55.65a1.97 1.97 0 0 1 2.8 2.8l-.68.68-2.8-2.8zm-1.38 1.38 2.8 2.8-7.99 7.99a1.4 1.4 0 0 1-.72.4l-3.17.7.7-3.2q.1-.42.4-.71z"/></symbol>
+      <symbol id="icon-pin" viewBox="0 0 20 20"><path d="m13.33 2.58 4.1 4.1a1.5 1.5 0 0 1-.39 2.4l-3.27 1.64a.5.5 0 0 0-.24.26l-1.18 2.95a1 1 0 0 1-1.64.34L8.5 12.2l-4.65 4.65a.5.5 0 0 1-.7-.7L7.8 11.5 5.73 9.43a1 1 0 0 1 .34-1.64l2.95-1.18a.5.5 0 0 0 .26-.24l1.64-3.27a1.5 1.5 0 0 1 2.4-.39zm3.4 4.8-4.11-4.1a.5.5 0 0 0-.8.13l-1.64 3.27a1.5 1.5 0 0 1-.77.71L6.44 8.57l5 5 1.18-2.95c.14-.34.39-.62.72-.78l3.27-1.64a.5.5 0 0 0 .13-.8"/></symbol>
+      <symbol id="icon-open" viewBox="0 0 20 20"><path d="M6 4a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-2.5a.5.5 0 0 1 1 0V14a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h2.5a.5.5 0 0 1 0 1zm5-.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5v5a.5.5 0 0 1-1 0V4.7l-5.15 5.15a.5.5 0 0 1-.7-.7L15.29 4H11.5a.5.5 0 0 1-.5-.5"/></symbol>
+      <symbol id="icon-download" viewBox="0 0 20 20"><path d="M15.5 17a.5.5 0 0 1 0 1h-11a.5.5 0 0 1 0-1zM10 2a.5.5 0 0 1 .5.5v11.8l3.65-3.65a.5.5 0 0 1 .7.7l-4.5 4.5a.5.5 0 0 1-.7 0l-4.5-4.5a.5.5 0 0 1 .7-.7l3.65 3.64V2.5A.5.5 0 0 1 10 2"/></symbol>
+      <symbol id="icon-attach" viewBox="0 0 20 20"><path d="M4.83 10.48 10.2 5.1a2.5 2.5 0 0 1 3.53 3.54l-6.18 6.18a1 1 0 0 1-1.41-1.42l5.47-5.47a.5.5 0 1 0-.7-.7l-5.48 5.46a2 2 0 1 0 2.83 2.83l6.18-6.17a3.5 3.5 0 1 0-4.95-4.95l-5.37 5.37a.5.5 0 0 0 .7.7"/></symbol>
+      <symbol id="icon-history" viewBox="0 0 20 20"><path d="M10 4a6 6 0 1 1-5.98 6.5.5.5 0 1 0-1 .08A7 7 0 1 0 5 5.1V3.5a.5.5 0 0 0-1 0v3c0 .28.22.5.5.5h3a.5.5 0 0 0 0-1H5.53A6 6 0 0 1 10 4m0 2a.5.5 0 0 1 .5.5V10h2a.5.5 0 0 1 0 1H10a.5.5 0 0 1-.5-.5v-4A.5.5 0 0 1 10 6"/></symbol>
+      <symbol id="icon-panel-expand" viewBox="0 0 20 20"><path d="M12.18 9.5H8.5a.5.5 0 0 0 0 1h3.68l-1 .87a.5.5 0 1 0 .66.76l2-1.75a.5.5 0 0 0 0-.76l-2-1.75a.5.5 0 1 0-.66.76zM4 4a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM3 6a1 1 0 0 1 1-1h1v10H4a1 1 0 0 1-1-1zm3 9V5h10a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1z"/></symbol>
+      <symbol id="icon-navigation" viewBox="0 0 20 20"><path d="M2.5 4a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1zm0 5.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1zm0 5.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1z"/></symbol>
+      <symbol id="icon-win-min" viewBox="0 0 20 20"><path d="M4.5 10h11" stroke="currentColor" fill="none"/></symbol>
+      <symbol id="icon-win-max" viewBox="0 0 20 20"><rect x="5" y="5" width="10" height="10" rx="1.5" stroke="currentColor" fill="none"/></symbol>
+      <symbol id="icon-win-close" viewBox="0 0 20 20"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" fill="none"/></symbol>
+      <symbol id="icon-play" viewBox="0 0 20 20"><path d="M6.5 4.3a.5.5 0 0 0-.75.43v10.54a.5.5 0 0 0 .75.43l9-5.27a.5.5 0 0 0 0-.86zm-1.75.43a1.5 1.5 0 0 1 2.26-1.3l9 5.28a1.5 1.5 0 0 1 0 2.58l-9 5.28a1.5 1.5 0 0 1-2.26-1.3z"/></symbol>
+      <symbol id="icon-pause" viewBox="0 0 20 20"><path d="M5 3.5C5 2.67 5.67 2 6.5 2h1C8.33 2 9 2.67 9 3.5v13c0 .83-.67 1.5-1.5 1.5h-1A1.5 1.5 0 0 1 5 16.5zM6.5 3a.5.5 0 0 0-.5.5v13c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5zM11 3.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v13c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5z"/></symbol>
+      <symbol id="icon-lightbulb" viewBox="0 0 20 20"><path d="M10 2a6 6 0 0 1 3.72 10.7q-.22.18-.22.43V15.5a2 2 0 0 1-2 2H8.5a2 2 0 0 1-2-2v-2.37q0-.25-.22-.43A6 6 0 0 1 10 2m2.5 13h-5v.5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1zM10 3a5 5 0 0 0-3.1 8.92c.36.29.6.73.6 1.21V14h5v-.87c0-.48.24-.92.6-1.21A5 5 0 0 0 10 3"/></symbol>
     </svg>
-    <div class="app-shell" data-testid="cowork-app">
-      <aside class="sidebar" aria-label="Copilot navigation">
-        <header class="sidebar-header">
-          <div class="brand-mark" aria-hidden="true"><span></span><span></span></div>
-          <strong>Copilot</strong>
-          <div class="header-actions" aria-label="Sidebar controls">
-            <button class="icon-button" data-action="apps-launcher" aria-label="Apps" aria-expanded="false"><svg class="fluent-icon"><use href="#icon-grid-dots"></use></svg></button>
-            <button class="icon-button" data-view="tasks" aria-label="Open tasks"><svg class="fluent-icon"><use href="#icon-clipboard-task"></use></svg></button>
-            <button class="icon-button" data-action="collapse-sidebar" aria-label="Collapse navigation"><svg class="fluent-icon"><use href="#icon-panel-contract"></use></svg></button>
-          </div>
-        </header>
 
-        <div class="apps-launcher" id="apps-launcher" hidden>
-          <header><strong>Microsoft 365</strong><button class="text-button" data-action="all-apps">All apps</button></header>
-          <div class="apps-grid">
-            <button data-action="launch-app"><span class="app-tile word">W</span><span>Word</span></button>
-            <button data-action="launch-app"><span class="app-tile excel">X</span><span>Excel</span></button>
-            <button data-action="launch-app"><span class="app-tile powerpoint">P</span><span>PowerPoint</span></button>
-            <button data-action="launch-app"><span class="app-tile outlook">O</span><span>Outlook</span></button>
-            <button data-action="launch-app"><span class="app-tile teams">T</span><span>Teams</span></button>
-            <button data-action="launch-app"><span class="app-tile onedrive"><svg class="fluent-icon"><use href="#icon-cloud"></use></svg></span><span>OneDrive</span></button>
-          </div>
+    <div class="window" data-testid="cowork-app">
+      <!-- Desktop app title bar -->
+      <header class="titlebar" id="titlebar">
+        <button class="titlebar-btn mobile-nav" data-action="mobile-nav" aria-label="Open navigation"><svg class="fluent-icon"><use href="#icon-navigation"></use></svg></button>
+        <svg class="titlebar-logo" aria-hidden="true"><use href="#copilot-logo"></use></svg>
+        <span class="titlebar-title" data-bind="windowTitle"></span>
+        <button class="titlebar-search" data-action="titlebar-search"><svg class="fluent-icon"><use href="#icon-search"></use></svg><span data-bind="titlebarSearch"></span></button>
+        <div class="titlebar-right">
+          <button class="titlebar-btn" data-action="titlebar-more" aria-label="Settings and more"><svg class="fluent-icon"><use href="#icon-more"></use></svg></button>
+          <span class="avatar tiny" data-bind="initials"></span>
+          <span class="window-controls" aria-hidden="true"><i><svg class="fluent-icon"><use href="#icon-win-min"></use></svg></i><i><svg class="fluent-icon"><use href="#icon-win-max"></use></svg></i><i class="close"><svg class="fluent-icon"><use href="#icon-win-close"></use></svg></i></span>
         </div>
+      </header>
 
-        <div class="mode-switch" role="tablist" aria-label="Copilot mode">
-          <button role="tab" data-mode="chat" aria-selected="false">Chat</button>
-          <button class="active" role="tab" data-mode="cowork" aria-selected="true">Cowork</button>
-        </div>
+      <div class="app-shell">
+        <aside class="sidebar" id="sidebar" aria-label="Copilot navigation"></aside>
+        <div class="sidebar-scrim" data-action="mobile-nav"></div>
 
-        <nav class="primary-nav" id="primary-nav">
-          <button class="nav-item active" data-view="home"><svg class="fluent-icon nav-icon"><use href="#icon-add-circle"></use></svg><span>New task</span></button>
-          <button class="nav-item" data-view="tasks"><svg class="fluent-icon nav-icon"><use href="#icon-task-list"></use></svg><span>My tasks</span></button>
-          <button class="nav-item" data-view="scheduled"><svg class="fluent-icon nav-icon"><use href="#icon-calendar-clock"></use></svg><span>Scheduled</span></button>
-          <button class="nav-item" data-view="customize"><svg class="fluent-icon nav-icon"><use href="#icon-wand"></use></svg><span>Customize</span></button>
-        </nav>
+        <main class="main-surface" id="main">
+          <header class="topbar" id="topbar"></header>
+          <section id="workspace" class="workspace"></section>
+        </main>
+      </div>
+    </div>
 
-        <footer class="profile-row">
-          <div class="avatar">EA</div>
-          <div class="profile-copy"><strong>Elvia Atkins</strong><span>M365 Copilot Premium</span></div>
-          <button class="icon-button" aria-label="Settings"><svg class="fluent-icon"><use href="#icon-settings"></use></svg></button>
-        </footer>
-      </aside>
-
-      <main class="main-surface">
-        <header class="topbar">
-          <button class="model-button" id="model-button" aria-haspopup="menu" aria-expanded="false"><span data-model-label>Auto</span><svg class="fluent-icon chevron"><use href="#icon-chevron-down"></use></svg></button>
-          <div class="topbar-spacer"></div>
-          <button class="icon-button security" aria-label="Security status"><svg class="fluent-icon"><use href="#icon-shield-check"></use></svg></button>
-          <button class="icon-button demo-control" id="open-studio" title="Open demo controls (Alt+D)" aria-label="Open demo controls"><svg class="fluent-icon"><use href="#icon-sparkle-circle"></use></svg></button>
-        </header>
-
-        <section class="home-view" id="workspace" aria-labelledby="welcome-heading">
-          <div class="home-content">
-            <h1 id="welcome-heading">Hi <span data-user-first-name>Elvia</span>, how can I help?</h1>
-            <form class="composer" id="task-composer" data-testid="task-composer">
-              <button type="button" class="composer-icon" aria-label="Add attachments"><svg class="fluent-icon"><use href="#icon-add"></use></svg></button>
-              <input id="task-input" aria-label="Task request" placeholder="Start a task" autocomplete="off" />
-              <button type="button" class="composer-icon" aria-label="Use voice input"><svg class="fluent-icon"><use href="#icon-mic"></use></svg></button>
-            </form>
-
-            <div class="suggestions-heading"><strong>Try these next</strong><button>Show more</button></div>
-            <div class="suggestion-grid" aria-label="Suggested tasks">
-              <button class="suggestion-card" data-prompt="Organize my inbox and flag anything that needs my reply."><span class="suggestion-icon inbox"><svg class="fluent-icon"><use href="#icon-mail"></use></svg></span><span>Organize my inbox</span></button>
-              <button class="suggestion-card" data-prompt="Arrange my week around my priorities and upcoming meetings."><span class="suggestion-icon calendar"><svg class="fluent-icon"><use href="#icon-calendar"></use></svg></span><span>Arrange my week</span></button>
-              <button class="suggestion-card" data-prompt="Research Contoso and prepare a concise company brief."><span class="suggestion-icon research"><svg class="fluent-icon"><use href="#icon-search"></use></svg></span><span>Research a company</span></button>
-            </div>
-          </div>
-        </section>
-      </main>
+    <div class="apps-launcher" id="apps-launcher" hidden>
+      <header><strong>Microsoft 365</strong><button class="text-button" data-action="all-apps">All apps</button></header>
+      <div class="apps-grid">
+        <button data-action="launch-app" data-app="Word"><svg class="file-icon lg"><use href="#ft-word"></use></svg><span>Word</span></button>
+        <button data-action="launch-app" data-app="Excel"><svg class="file-icon lg"><use href="#ft-excel"></use></svg><span>Excel</span></button>
+        <button data-action="launch-app" data-app="PowerPoint"><svg class="file-icon lg"><use href="#ft-powerpoint"></use></svg><span>PowerPoint</span></button>
+        <button data-action="launch-app" data-app="Outlook"><svg class="file-icon lg"><use href="#ft-outlook"></use></svg><span>Outlook</span></button>
+        <button data-action="launch-app" data-app="Teams"><svg class="file-icon lg"><use href="#ft-teams"></use></svg><span>Teams</span></button>
+        <button data-action="launch-app" data-app="OneDrive"><span class="app-tile onedrive"><svg class="fluent-icon"><use href="#icon-cloud"></use></svg></span><span>OneDrive</span></button>
+      </div>
     </div>
 
     <div class="popover model-menu" id="model-menu" role="menu" aria-label="Choose a model" hidden></div>
+
+    <!-- Capture chrome: hidden by ?clean=1 -->
+    <div class="capture-chrome" data-mk-chrome>
+      <span class="training-badge" data-bind="trainingBadge"></span>
+      <button class="studio-launcher" id="open-studio" title="Demo controls (Alt+D)" aria-label="Open demo controls"><svg class="fluent-icon"><use href="#icon-sparkle-circle"></use></svg></button>
+    </div>
+
     <div class="studio-backdrop" id="studio-backdrop" hidden></div>
-    <aside class="studio-panel" id="studio-panel" aria-labelledby="studio-title" aria-hidden="true">
+    <aside class="studio-panel" id="studio-panel" aria-labelledby="studio-title" aria-hidden="true" data-mk-chrome>
       <header>
         <div><span class="eyebrow">Tutorial staging</span><h2 id="studio-title">Demo controls</h2></div>
         <button class="icon-button" id="close-studio" aria-label="Close demo controls"><svg class="fluent-icon"><use href="#icon-dismiss"></use></svg></button>
       </header>
       <div class="studio-body">
-        <label>Scene<select id="studio-scene"><option value="home">Cowork home</option><option value="chat">Copilot Chat</option><option value="chat-response">Copilot grounded answer</option><option value="search-results">Copilot Search results</option><option value="workflow-agent">Workflow agent</option><option value="workflow-complete">Completed workflow</option><option value="running">Task in progress</option><option value="approval">Approval request</option><option value="complete">Completed task</option><option value="tasks">My tasks</option><option value="scheduled">Automations</option><option value="customize">Customize</option></select></label>
-        <label>Display name<input id="studio-name" value="Elvia Atkins" /></label>
-        <label>Task prompt<textarea id="studio-prompt" rows="4">Organize my inbox and draft replies to urgent messages.</textarea></label>
-        <label>Model<select id="studio-model"></select></label>
-        <label class="switch-row"><span>Show session side panel</span><input id="studio-side-panel" type="checkbox" checked /></label>
+        <label>Scene<select id="studio-scene"></select></label>
+        <label>Conversation<select id="studio-chat"></select></label>
+        <label>Display name<input id="studio-name" /></label>
+        <label>Prompt<textarea id="studio-prompt" rows="3"></textarea></label>
+        <div class="studio-row">
+          <label>Model<select id="studio-model"></select></label>
+          <label>Theme<select id="studio-theme"><option value="light">Light</option><option value="dark">Dark</option></select></label>
+        </div>
+        <label class="switch-row"><span>Show Cowork task panel</span><input id="studio-side-panel" type="checkbox" checked /></label>
         <div class="studio-actions">
           <button class="secondary-button" id="copy-scene-link">Copy scene link</button>
           <button class="primary-button" id="apply-studio">Apply scene</button>
         </div>
+        <div class="studio-actions">
+          <button class="secondary-button" id="studio-play" title="Types the prompt into Copilot Chat and streams the reply">Play: type &amp; reply</button>
+          <button class="secondary-button" id="studio-edit-data">Edit demo data</button>
+        </div>
         <button class="text-button" id="reset-demo">Reset all demo data</button>
-        <p class="studio-hint">Tip: press <kbd>Alt</kbd> + <kbd>D</kbd> to hide or show this panel while recording.</p>
+        <p class="studio-hint"><kbd>Alt</kbd>+<kbd>D</kbd> demo controls · <kbd>Alt</kbd>+<kbd>E</kbd> data editor · add <code>?clean=1</code> to hide capture chrome.</p>
       </div>
     </aside>
     <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
     <script src="./demo-data.js"></script>
+    <script src="../shared/mockkit.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

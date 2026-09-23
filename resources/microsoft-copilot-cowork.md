@@ -24,7 +24,15 @@ Supported scene parameters:
 ?scene=home
 ?scene=chat
 ?scene=chat-response
+?scene=chat-thinking
+?scene=chat-web
+?scene=chat-table
+?scene=search
 ?scene=search-results
+?scene=library
+?scene=agents
+?scene=notebooks
+?scene=create
 ?scene=workflow-agent
 ?scene=workflow-complete
 ?scene=running
@@ -68,3 +76,7 @@ The mock follows the supplied screenshot and Microsoft’s current product guida
 - [Work IQ overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq)
 
 Microsoft, Microsoft 365, and Copilot are trademarks of Microsoft. This independent prototype is for demonstration and training production only.
+
+## Conversations and live data
+
+Chats are defined in the `conversations` map in `demo-data.js` and open with `?chat=<id>`. Press `Alt+E` to edit any content live. `window.TrainingMock` (an alias of `window.CoworkDemo`) adds `openChat`, `addMessage`, `typePrompt`, and `streamReply` for recordings.
