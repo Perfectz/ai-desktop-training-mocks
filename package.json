@@ -1,0 +1,11 @@
+{
+  "name": "ai-desktop-training-mocks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editable, deterministic desktop interface mocks for AI training tutorials.",
+  "scripts": {
+    "serve": "npx --yes serve docs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "license": "MIT"
+}

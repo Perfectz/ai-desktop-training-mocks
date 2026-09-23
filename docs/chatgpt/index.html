@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Editable ChatGPT Desktop and Codex training mock using fictional data." />
+  <title>ChatGPT Desktop — Training Mock</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-compose" viewBox="0 0 24 24"><path d="M13 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-7M17.5 3.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-library" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h11.5A1.5 1.5 0 0 1 19 4.5v15A1.5 1.5 0 0 1 17.5 21H6a2 2 0 0 1-2-1.5m0 0A2.5 2.5 0 0 1 6.5 17H19"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5m-5-7V5m10 5V5M5 10h14v2a7 7 0 0 1-14 0zM8 5V2m8 3V2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0m-7 7v3"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M4 12v2m4-6v8m4-12v16m4-12v8m4-6v4"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m5 12 14-8-5 16-3-6z"/><path d="m11 14 8-10"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.4 4.6L18 9l-4.6 1.4L12 15l-1.4-4.6L6 9l4.6-1.4zM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3m8-6 4 3-4 3m-2-9-4 12"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m5 0h5"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="19" r="2"/><path d="M6 7v10m2-8c5 0 8 0 8-1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-thumb" viewBox="0 0 24 24"><path d="M7 10v11H3V10zm0 9h9a2 2 0 0 0 1.9-1.4l2-6A2 2 0 0 0 18 9h-5l1-4a2 2 0 0 0-4-1L7 10"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="2"/><path d="m21 15-5-5L5 20"/></symbol>
+    <symbol id="i-document" viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 12h6m-6 4h6"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m4 20 4-1 11-11-3-3L5 16zm10-13 3 3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></symbol>
+    <symbol id="i-slides" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4m-5-8 3-3 3 2 4-5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <div class="desktop-shell" data-app="chatgpt">
+    <aside class="sidebar" aria-label="ChatGPT navigation">
+      <div class="sidebar-top">
+        <button class="product-switcher" id="product-switcher" aria-expanded="false"><span class="openai-mark">◎</span><strong data-product-label>ChatGPT</strong><svg><use href="#i-chevron"/></svg></button>
+        <button class="icon-button" data-action="collapse" aria-label="Collapse sidebar"><svg><use href="#i-panel"/></svg></button>
+      </div>
+      <div class="product-menu" id="product-menu" hidden>
+        <button data-product="chatgpt" class="active"><span class="product-glyph">◎</span><span><strong>ChatGPT</strong><small>Chat and Work</small></span><svg><use href="#i-check"/></svg></button>
+        <button data-product="codex"><span class="product-glyph codex">⌘</span><span><strong>Codex</strong><small>Software development</small></span></button>
+      </div>
+      <div class="experience-toggle" role="tablist" aria-label="ChatGPT experience"><button data-experience="chat" class="active" role="tab">Chat</button><button data-experience="work" role="tab">Work</button></div>
+      <nav class="nav-primary">
+        <button class="nav-row active" data-action="new"><svg><use href="#i-compose"/></svg><span>New chat</span><kbd>Ctrl N</kbd></button>
+        <button class="nav-row" data-action="search"><svg><use href="#i-search"/></svg><span>Search</span></button>
+        <button class="nav-row" data-action="library"><svg><use href="#i-library"/></svg><span>Library</span></button>
+        <button class="nav-row" data-action="plugins"><svg><use href="#i-plug"/></svg><span>Plugins</span></button>
+      </nav>
+      <div class="sidebar-scroll">
+        <section class="projects-section"><header><span>Projects</span><button data-action="new-project" aria-label="New project"><svg><use href="#i-plus"/></svg></button></header><div id="projects-list"></div></section>
+        <section class="recents-section"><header><span>Recents</span><button data-action="filter-recents" aria-label="Filter recent chats"><svg><use href="#i-more"/></svg></button></header><div class="recent-filter" id="recent-filter"><button class="active" data-recent-filter="All">All</button><button data-recent-filter="Chat">Chat</button><button data-recent-filter="Work">Work</button></div><div id="recents-list"></div></section>
+      </div>
+      <button class="account-row" data-action="account"><span class="avatar">EA</span><span><strong>Elvia Atkins</strong><small>ChatGPT Business</small></span><svg><use href="#i-more"/></svg></button>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><button class="model-picker" data-action="model">GPT-6 Sol <svg><use href="#i-chevron"/></svg></button><div class="topbar-spacer"></div><span class="fake-badge">TRAINING MOCK · FICTIONAL DATA</span><button class="icon-button" data-action="share" aria-label="Share"><svg><use href="#i-copy"/></svg></button><button class="icon-button" data-action="more" aria-label="More options"><svg><use href="#i-more"/></svg></button></header>
+      <section id="workspace" class="workspace"></section>
+    </main>
+  </div>
+
+  <div class="search-overlay" id="search-overlay" hidden><div class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title"><header><svg><use href="#i-search"/></svg><input id="global-search" placeholder="Search chats, projects, and files" aria-label="Search chats, projects, and files"/><button data-action="close-search"><svg><use href="#i-close"/></svg></button></header><div class="search-filters"><button class="active">All</button><button>Chats</button><button>Documents</button><button>Projects</button></div><h2 id="search-title">Recent</h2><div id="search-results"></div></div></div>
+
+  <button class="studio-launch" id="open-studio" title="Tutorial controls (Alt+D)"><svg><use href="#i-spark"/></svg></button>
+  <div class="studio-backdrop" id="studio-backdrop" hidden></div>
+  <aside class="studio" id="studio" aria-hidden="true"><header><div><span>Tutorial staging</span><h2>ChatGPT mock controls</h2></div><button data-action="close-studio"><svg><use href="#i-close"/></svg></button></header><div class="studio-body"><label>Scene<select id="studio-scene"></select></label><label>Display name<input id="studio-name"/></label><label>Prompt<textarea id="studio-prompt" rows="4"></textarea></label><label>Model<select id="studio-model"></select></label><div class="studio-actions"><button class="secondary" data-action="copy-link">Copy scene link</button><button class="primary" data-action="apply-studio">Apply scene</button></div><button class="reset-link" data-action="reset">Reset fake data</button><p>Press <kbd>Alt</kbd> + <kbd>D</kbd> to show or hide controls while recording.</p></div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./demo-data.js"></script><script src="./app.js"></script>
+</body>
+</html>
